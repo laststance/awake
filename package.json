@@ -19,83 +19,83 @@
   "license": "MIT",
   "author": "Laststance.io",
   "type": "module",
-  "main": "./dist/entrypoints/recommended.js",
+  "main": "./dist/entrypoints/recommended.cjs",
   "types": "./dist/entrypoints/recommended.d.ts",
   "exports": {
     ".": {
       "types": "./dist/entrypoints/recommended.d.ts",
       "import": "./dist/entrypoints/recommended.mjs",
-      "require": "./dist/entrypoints/recommended.js"
+      "require": "./dist/entrypoints/recommended.cjs"
     },
     "./all": {
       "types": "./dist/entrypoints/all.d.ts",
       "import": "./dist/entrypoints/all.mjs",
-      "require": "./dist/entrypoints/all.js"
+      "require": "./dist/entrypoints/all.cjs"
     },
     "./object": {
       "types": "./dist/entrypoints/object.d.ts",
       "import": "./dist/entrypoints/object.mjs",
-      "require": "./dist/entrypoints/object.js"
+      "require": "./dist/entrypoints/object.cjs"
     },
     "./array": {
       "types": "./dist/entrypoints/array.d.ts",
       "import": "./dist/entrypoints/array.mjs",
-      "require": "./dist/entrypoints/array.js"
+      "require": "./dist/entrypoints/array.cjs"
     },
     "./is-array": {
       "types": "./dist/entrypoints/is-array.d.ts",
       "import": "./dist/entrypoints/is-array.mjs",
-      "require": "./dist/entrypoints/is-array.js"
+      "require": "./dist/entrypoints/is-array.cjs"
     },
     "./json": {
       "types": "./dist/entrypoints/json.d.ts",
       "import": "./dist/entrypoints/json.mjs",
-      "require": "./dist/entrypoints/json.js"
+      "require": "./dist/entrypoints/json.cjs"
     },
     "./promise": {
       "types": "./dist/entrypoints/promise.d.ts",
       "import": "./dist/entrypoints/promise.mjs",
-      "require": "./dist/entrypoints/promise.js"
+      "require": "./dist/entrypoints/promise.cjs"
     },
     "./fetch": {
       "types": "./dist/entrypoints/fetch.d.ts",
       "import": "./dist/entrypoints/fetch.mjs",
-      "require": "./dist/entrypoints/fetch.js"
+      "require": "./dist/entrypoints/fetch.cjs"
     },
     "./map": {
       "types": "./dist/entrypoints/map.d.ts",
       "import": "./dist/entrypoints/map.mjs",
-      "require": "./dist/entrypoints/map.js"
+      "require": "./dist/entrypoints/map.cjs"
     },
     "./set": {
       "types": "./dist/entrypoints/set.d.ts",
       "import": "./dist/entrypoints/set.mjs",
-      "require": "./dist/entrypoints/set.js"
+      "require": "./dist/entrypoints/set.cjs"
     },
     "./storage": {
       "types": "./dist/entrypoints/storage.d.ts",
       "import": "./dist/entrypoints/storage.mjs",
-      "require": "./dist/entrypoints/storage.js"
+      "require": "./dist/entrypoints/storage.cjs"
     },
     "./structured-clone": {
       "types": "./dist/entrypoints/structured-clone.d.ts",
       "import": "./dist/entrypoints/structured-clone.mjs",
-      "require": "./dist/entrypoints/structured-clone.js"
+      "require": "./dist/entrypoints/structured-clone.cjs"
     },
     "./dom": {
       "types": "./dist/entrypoints/dom.d.ts",
       "import": "./dist/entrypoints/dom.mjs",
-      "require": "./dist/entrypoints/dom.js"
+      "require": "./dist/entrypoints/dom.cjs"
     },
     "./custom-event": {
       "types": "./dist/entrypoints/custom-event.d.ts",
       "import": "./dist/entrypoints/custom-event.mjs",
-      "require": "./dist/entrypoints/custom-event.js"
+      "require": "./dist/entrypoints/custom-event.cjs"
     },
     "./form": {
       "types": "./dist/entrypoints/form.d.ts",
       "import": "./dist/entrypoints/form.mjs",
-      "require": "./dist/entrypoints/form.js"
+      "require": "./dist/entrypoints/form.cjs"
     }
   },
   "files": [

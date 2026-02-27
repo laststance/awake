@@ -147,7 +147,7 @@ target.addEventListener('user:login', (e) => {
 })
 
 // Standard DOM events are unaffected
-document.addEventListener('click', (e) => { /* PointerEvent as usual */ })
+document.addEventListener('click', (e) => { /* standard event — unaffected */ })
 ```
 
 ### JSON

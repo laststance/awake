@@ -14,6 +14,7 @@
  *   e.detail.userId  // string — fully typed!
  * })
  */
+// biome-ignore lint/suspicious/noEmptyInterface: declaration-merging extension point for consumers.
 interface AwakeEventMap {}
 
 interface EventTarget {

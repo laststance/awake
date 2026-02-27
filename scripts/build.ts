@@ -27,11 +27,11 @@ for (const file of files) {
   const baseName = file.replace('.d.ts', '')
   const srcPath = join(SRC_ENTRYPOINTS, file)
   const distDts = join(DIST_ENTRYPOINTS, file)
-  const distJs = join(DIST_ENTRYPOINTS, `${baseName}.js`)
+  const distCjs = join(DIST_ENTRYPOINTS, `${baseName}.cjs`)
   const distMjs = join(DIST_ENTRYPOINTS, `${baseName}.mjs`)
 
   copyFileSync(srcPath, distDts)
-  writeFileSync(distJs, '')
+  writeFileSync(distCjs, '')
   writeFileSync(distMjs, '')
 
   console.log(`Built: ${baseName}`)

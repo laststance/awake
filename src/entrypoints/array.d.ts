@@ -6,10 +6,10 @@ interface Array<T> {
    * @example
    * [1, null, 'hi', undefined].filter(Boolean) // (number | string)[]
    */
-  filter<S extends T>(
+  filter(
     predicate: BooleanConstructor,
     thisArg?: unknown
-  ): Awake.NonFalsy<S>[]
+  ): Awake.NonFalsy<T>[]
 
   /**
    * includes() accepts widened literal types.
@@ -39,10 +39,10 @@ interface Array<T> {
 }
 
 interface ReadonlyArray<T> {
-  filter<S extends T>(
+  filter(
     predicate: BooleanConstructor,
     thisArg?: unknown
-  ): Awake.NonFalsy<S>[]
+  ): Awake.NonFalsy<T>[]
 
   includes(
     searchElement: T | (Awake.WidenLiteral<T> & {}),

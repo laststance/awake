@@ -34,6 +34,12 @@ expectTypeOf(document.querySelector('h1 + p')).toEqualTypeOf<HTMLParagraphElemen
 // General sibling combinator
 expectTypeOf(document.querySelector('h2 ~ ul')).toEqualTypeOf<HTMLUListElement | null>()
 
+// Non-spaced combinators (CSS allows optional whitespace)
+expectTypeOf(document.querySelector('div>span')).toEqualTypeOf<HTMLSpanElement | null>()
+expectTypeOf(document.querySelector('h1+p')).toEqualTypeOf<HTMLParagraphElement | null>()
+expectTypeOf(document.querySelector('h2~ul')).toEqualTypeOf<HTMLUListElement | null>()
+expectTypeOf(document.querySelector('div>span.foo')).toEqualTypeOf<HTMLSpanElement | null>()
+
 // querySelectorAll
 expectTypeOf(document.querySelectorAll('li')).toEqualTypeOf<NodeListOf<HTMLLIElement>>()
 expectTypeOf(document.querySelectorAll('div, span')).toEqualTypeOf<NodeListOf<HTMLDivElement | HTMLSpanElement>>()

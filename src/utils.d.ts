@@ -83,9 +83,9 @@ declare namespace Awake {
    * @example LastToken<'main article p'> → 'p'
    */
   type LastToken<S extends string> =
-    S extends `${string} > ${infer After}` ? LastToken<After>
-    : S extends `${string} + ${infer After}` ? LastToken<After>
-    : S extends `${string} ~ ${infer After}` ? LastToken<After>
+    S extends `${string}>${infer After}` ? LastToken<Trim<After>>
+    : S extends `${string}+${infer After}` ? LastToken<Trim<After>>
+    : S extends `${string}~${infer After}` ? LastToken<Trim<After>>
     : S extends `${string} ${infer After}` ? LastToken<After>
     : S
 
@@ -172,11 +172,12 @@ declare namespace Awake {
    * fd.get('name')    // string | null
    * fd.get('avatar')  // File | null
    */
-  interface TypedFormData<T extends Record<string, string | File>> {
+  interface TypedFormData<T extends Record<string, string | File>>
+    extends Omit<FormData, 'get' | 'set' | 'has' | 'append' | 'delete' | 'getAll'> {
     get<K extends keyof T & string>(name: K): T[K] | null
     set<K extends keyof T & string>(name: K, value: T[K]): void
     set<K extends keyof T & string>(name: K, value: Blob, filename?: string): void
-    has<K extends string>(name: K): K extends keyof T ? true : boolean
+    has(name: string): boolean
     append<K extends keyof T & string>(name: K, value: T[K]): void
     append<K extends keyof T & string>(name: K, value: Blob, filename?: string): void
     delete<K extends keyof T & string>(name: K): void
@@ -193,7 +194,7 @@ declare namespace Awake {
   interface TypedURLSearchParams<T extends Record<string, string>> extends URLSearchParams {
     get<K extends keyof T & string>(name: K): string | null
     set<K extends keyof T & string>(name: K, value: string): void
-    has<K extends string>(name: K): K extends keyof T ? true : boolean
+    has(name: string): boolean
     append<K extends keyof T & string>(name: K, value: string): void
     delete<K extends keyof T & string>(name: K): void
     getAll<K extends keyof T & string>(name: K): string[]
