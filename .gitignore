@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.env
+.env.*
+CLAUDE.md
+.DS_Store
