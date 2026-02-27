@@ -252,7 +252,7 @@ safeClone({ x: 1 })    // OK
 | `@laststance/awake` | All recommended rules (default) |
 | `@laststance/awake/all` | Everything including experimental |
 | `@laststance/awake/object` | Object.keys/values/entries/fromEntries/freeze |
-| `@laststance/awake/array` | filter(Boolean), includes, indexOf, isArray |
+| `@laststance/awake/array` | filter(Boolean), includes, indexOf, lastIndexOf, isArray |
 | `@laststance/awake/json` | JSON.parse → unknown |
 | `@laststance/awake/promise` | catch/then → unknown error |
 | `@laststance/awake/fetch` | Response.json() → unknown |
