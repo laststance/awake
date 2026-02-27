@@ -1,0 +1,120 @@
+{
+  "name": "@laststance/awake",
+  "version": "2.0.0",
+  "description": "TypeScript type-only package. Domain types flow through standard APIs.",
+  "keywords": [
+    "typescript",
+    "types",
+    "type-safety",
+    "object-keys",
+    "ts-reset",
+    "type-aware",
+    "declaration"
+  ],
+  "homepage": "https://github.com/laststance/awake",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/laststance/awake"
+  },
+  "license": "MIT",
+  "author": "Laststance.io",
+  "type": "module",
+  "main": "./dist/entrypoints/recommended.js",
+  "types": "./dist/entrypoints/recommended.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/entrypoints/recommended.d.ts",
+      "import": "./dist/entrypoints/recommended.mjs",
+      "require": "./dist/entrypoints/recommended.js"
+    },
+    "./all": {
+      "types": "./dist/entrypoints/all.d.ts",
+      "import": "./dist/entrypoints/all.mjs",
+      "require": "./dist/entrypoints/all.js"
+    },
+    "./object": {
+      "types": "./dist/entrypoints/object.d.ts",
+      "import": "./dist/entrypoints/object.mjs",
+      "require": "./dist/entrypoints/object.js"
+    },
+    "./array": {
+      "types": "./dist/entrypoints/array.d.ts",
+      "import": "./dist/entrypoints/array.mjs",
+      "require": "./dist/entrypoints/array.js"
+    },
+    "./is-array": {
+      "types": "./dist/entrypoints/is-array.d.ts",
+      "import": "./dist/entrypoints/is-array.mjs",
+      "require": "./dist/entrypoints/is-array.js"
+    },
+    "./json": {
+      "types": "./dist/entrypoints/json.d.ts",
+      "import": "./dist/entrypoints/json.mjs",
+      "require": "./dist/entrypoints/json.js"
+    },
+    "./promise": {
+      "types": "./dist/entrypoints/promise.d.ts",
+      "import": "./dist/entrypoints/promise.mjs",
+      "require": "./dist/entrypoints/promise.js"
+    },
+    "./fetch": {
+      "types": "./dist/entrypoints/fetch.d.ts",
+      "import": "./dist/entrypoints/fetch.mjs",
+      "require": "./dist/entrypoints/fetch.js"
+    },
+    "./map": {
+      "types": "./dist/entrypoints/map.d.ts",
+      "import": "./dist/entrypoints/map.mjs",
+      "require": "./dist/entrypoints/map.js"
+    },
+    "./set": {
+      "types": "./dist/entrypoints/set.d.ts",
+      "import": "./dist/entrypoints/set.mjs",
+      "require": "./dist/entrypoints/set.js"
+    },
+    "./storage": {
+      "types": "./dist/entrypoints/storage.d.ts",
+      "import": "./dist/entrypoints/storage.mjs",
+      "require": "./dist/entrypoints/storage.js"
+    },
+    "./structured-clone": {
+      "types": "./dist/entrypoints/structured-clone.d.ts",
+      "import": "./dist/entrypoints/structured-clone.mjs",
+      "require": "./dist/entrypoints/structured-clone.js"
+    },
+    "./dom": {
+      "types": "./dist/entrypoints/dom.d.ts",
+      "import": "./dist/entrypoints/dom.mjs",
+      "require": "./dist/entrypoints/dom.js"
+    },
+    "./custom-event": {
+      "types": "./dist/entrypoints/custom-event.d.ts",
+      "import": "./dist/entrypoints/custom-event.mjs",
+      "require": "./dist/entrypoints/custom-event.js"
+    },
+    "./form": {
+      "types": "./dist/entrypoints/form.d.ts",
+      "import": "./dist/entrypoints/form.mjs",
+      "require": "./dist/entrypoints/form.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsx scripts/build.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.test.json",
+    "test": "vitest run --typecheck",
+    "test:watch": "vitest --typecheck",
+    "prepublishOnly": "pnpm run build"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.35",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^2.1.9"
+  }
+}
